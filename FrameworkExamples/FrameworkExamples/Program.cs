@@ -11,5 +11,17 @@ namespace FrameworkExamples
         static void Main(string[] args)
         {
         }
+
+        public static int ReadInt()
+        {
+            int result = 0;
+            do
+            {
+                Console.WriteLine("Введите число:");
+            }
+            while (int.TryParse(Console.ReadLine(), out result) == false);
+
+            return result;
+        }
     }
 }
